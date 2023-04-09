@@ -1,0 +1,222 @@
+/* font */
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;500;700;800;900&family=Tilt+Neon&display=swap");
+
+* {
+  font-family: "Kanit";
+}
+
+body {
+
+  background-image: url("./img/bgSvg.svg");
+  background-size: contain;
+}
+
+
+
+.header-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+h1 {
+  color: white;
+  font-size: 10rem;
+  font-weight: 900;
+  margin: 70px 0 0px 0px;
+  user-select: none;
+}
+
+
+.titleSpan {
+  display: inline;
+  color: white;
+  font-size: 10rem;
+  font-weight: 900;
+  -webkit-text-stroke: 1px #fcf8f8; /* establece el grosor y color del borde */
+  -webkit-text-fill-color: transparent; /* hace que el color de texto sea transparente */
+}
+
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  margin: 20px 0 30px 0;
+  background-color: #190a3f60;
+  border-radius: 5px;
+  border: 1px solid rgb(93, 0, 255);
+  outline: none;
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  width: 20%;
+  box-shadow: 0px 3px 24px 6px rgba(123, 0, 255, 0.438);
+  -webkit-box-shadow: 0px 3px 24px 6px rgba(123, 0, 255, 0.438);
+  -moz-box-shadow: 0px 3px 24px 6px rgba(123, 0, 255, 0.438);
+}
+
+input::placeholder {
+  color: rgb(159, 173, 232);
+}
+
+.textInputBottom {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.768);
+}
+
+
+
+.card-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid rgb(93, 0, 255);
+  border-bottom: 0px;
+  background-color: #190a3f;
+}
+
+.card {
+  user-select: none;
+  position: relative;
+  width: 300px; 
+  height: 300px; 
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 15px;
+  margin: 5px;
+  border-bottom: 0px;
+  border-top: 0px;
+}
+.card:hover {
+  background: linear-gradient(180deg, rgba(12, 244, 0, 0) 16%, #0e0e12);
+}
+.card:hover img {
+  transform: scale(1.4);
+  opacity: 0.17;
+  filter: blur(2px);
+  transition: transform 0.6s ease, opacity 0.6s ease, filter 0.6s ease;
+  
+}
+
+.card:not(:hover) img {
+  transform: scale(1);
+  opacity: 1;
+  filter: blur(0);
+  transition: transform 0.7s ease, opacity 0.7s ease, filter 0.7s ease;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.nav-list {
+  display: flex;
+  margin-top: 10px;
+  width: 70%;
+  margin: 0 auto;
+  background-color: #150e2d;
+  padding: 40px 0 40px 0;
+  border: 1px solid #5d00ff;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom: 0px;
+}
+
+.button {
+  cursor: pointer;
+  margin: 0 40px 0 40px;
+  font-family: "Kanit";
+  font-weight: 300;
+  outline: none;
+  text-decoration: none;
+  background-color: rgba(27, 15, 137, 0.376);
+  padding-top: 50px;
+  border-radius: 15px;
+  border: 1px solid rgb(93, 0, 255);
+  padding: 10px;
+  color: white;
+  font-size: 1rem;
+}
+
+
+.texto-oculto {
+  font-weight: 300;
+  cursor: pointer;
+  position: absolute;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+
+.textStar {
+  font-size: 3rem;
+  transition: transform 0.7s ease, text-shadow 0.7s ease;
+}
+
+.textStar:hover {
+  scale: 1.1;
+  transition: transform 0.6s ease;
+  transform: rotate(76deg);
+  text-shadow: 0px 0px 11px rgba(255, 250, 0, 0.9);
+}
+
+.textStar:hover,
+.textStar:focus {
+  outline: none;
+}
+
+.textStar:focus {
+  transform: rotate(32deg);
+}
+.textStar:focus:not(:focus-visible) {
+  transform: none;
+}
+
+.card:hover .texto-oculto {
+  opacity: 1;
+}
+
+.likeSpan{
+  font-size: 1.5rem;
+  color: white;
+}
+
+footer {
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid #7c6aa7;
+  background-image: url(./img/bgNoResults.svg);
+  font-weight: 100;
+  font-size: 1.2rem;
+  color: rgb(255, 255, 255);
+  padding: 10px 0 10px 0px;
+  text-align: center;
+}
+
+
+
+.no-favorites{
+  color: white;
+  font-size: 2rem;
+  font-weight: 100;
+}

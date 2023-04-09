@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pruebas en ItemGif Debe matchear el snapshot. 1`] = `
+<div>
+  <div
+    class="card"
+  >
+    <img
+      alt="Qiyana"
+      src="http://qiyana-sito.com/qiyana.jpg"
+    />
+    <p>
+      Qiyana
+    </p>
+  </div>
+</div>
+`;
