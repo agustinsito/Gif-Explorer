@@ -5,15 +5,13 @@
   font-family: "Kanit";
 }
 
-body {
-
-  background-image: url("./assets/img/bgSvg.svg");
+body{
+  background-image: url(./assets/img/bgSvg.svg);
   background-size: contain;
 }
 
-
-
-.header-title{
+.header-title {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,13 +26,12 @@ h1 {
   user-select: none;
 }
 
-
 .titleSpan {
   display: inline;
   color: white;
   font-size: 10rem;
   font-weight: 900;
-  -webkit-text-stroke: 1px #fcf8f8; /* establece el grosor y color del borde */
+  -webkit-text-stroke: 1px #ffddfd; /* establece el grosor y color del borde */
   -webkit-text-fill-color: transparent; /* hace que el color de texto sea transparente */
 }
 
@@ -46,14 +43,13 @@ form {
 
 input {
   margin: 20px 0 30px 0;
-  background-color: #190a3f60;
+  background-color: #11072c;
   border-radius: 5px;
   border: 1px solid rgb(93, 0, 255);
   outline: none;
   color: white;
   font-size: 1.2rem;
   padding: 10px 15px;
-  width: 20%;
   box-shadow: 0px 3px 24px 6px rgba(123, 0, 255, 0.438);
   -webkit-box-shadow: 0px 3px 24px 6px rgba(123, 0, 255, 0.438);
   -moz-box-shadow: 0px 3px 24px 6px rgba(123, 0, 255, 0.438);
@@ -64,14 +60,13 @@ input::placeholder {
 }
 
 .textInputBottom {
+  user-select: none;
   text-align: center;
   font-size: 1.6rem;
   margin-bottom: 5px;
   font-weight: 300;
-  color: rgba(255, 255, 255, 0.768);
+  color: #cab4ff;
 }
-
-
 
 .card-grid {
   display: flex;
@@ -83,13 +78,14 @@ input::placeholder {
   border: 1px solid rgb(93, 0, 255);
   border-bottom: 0px;
   background-color: #150835b7;
+  
 }
 
 .card {
   user-select: none;
   position: relative;
-  width: 300px; 
-  height: 300px; 
+  width: 300px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -104,7 +100,6 @@ input::placeholder {
   opacity: 0.17;
   filter: blur(2px);
   transition: transform 0.6s ease, opacity 0.6s ease, filter 0.6s ease;
-  
 }
 
 .card:not(:hover) img {
@@ -150,6 +145,10 @@ input::placeholder {
   font-size: 1rem;
 }
 
+.button:hover{
+  background-color: rgb(63, 0, 158);
+  border: 1px solid rgb(114, 63, 255);
+}
 
 .texto-oculto {
   font-weight: 300;
@@ -191,7 +190,7 @@ input::placeholder {
   opacity: 1;
 }
 
-.likeSpan{
+.likeSpan {
   font-size: 1.5rem;
   color: white;
 }
@@ -202,34 +201,102 @@ footer {
   border: 1px solid #7c6aa7;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-image: url(./img/bgNoResults.svg);
+  background-color: #06021d;
   font-weight: 300;
-  font-size: 1.2rem;
-  font-family: Georgia, 'Times New Roman', Times, serif !important;
+  font-family: Georgia, "Times New Roman", Times, serif !important;
   color: rgb(177, 194, 255);
-  padding: 10px 0 10px 0px;
   text-align: center;
   backdrop-filter: blur(23px);
 }
 
-
-
-.no-favorites{
+.no-favorites {
   color: white;
   font-size: 2rem;
   font-weight: 100;
 }
 
-
-.NoFavs{
+.NoFavs {
   margin: 0 auto;
-  width: 100%
+  width: 100%;
 }
 
-.nofav-container{
+.nofav-container {
   margin-top: 50px;
   margin-bottom: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 970px) {
+  h1,
+  .titleSpan {
+    display: flex;
+    line-height: 1;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-grid,
+  .nav-list,
+  footer {
+    width: 100%;
+  }
+  h1,
+  .titleSpan {
+    font-size: 8rem;
+    display: flex;
+    line-height: 1;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 572px) {
+  h1,
+  .titleSpan {
+    font-size: 5rem;
+  }
+  .textInputBottom {
+    font-size: 1.4rem;
+  }
+  input {
+    height: 20px;
+  }
+
+  .nav-list{
+    padding: 20px 0px 20px 0px;
+  }
+  .button{
+    font-size: 0.9rem;
+    padding: 6px;
+
+  }
+
+  .bg-Svg{
+    background-image: url(./assets/img/bgSvg.svg);
+    background-size: contain;
+  }
+
+  body{
+    background-image: none;
+    background-color: #06021d;
+  }
+
+  
+@media (max-width: 360px) {
+  h1,
+  .titleSpan {
+    font-size: 4.3rem;
+  }
+  input {
+    height: 20px;
+  }
+
+  .textInputBottom {
+    font-size: 1rem;
+  }
+}
 }

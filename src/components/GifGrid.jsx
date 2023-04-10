@@ -56,7 +56,7 @@ export const GifGrid = ({ category }) => {
         handleShowFavorites={handleShowFavorites}
         handleBackToSearch={handleBackToSearch}
       />
-      <div className="card-grid">
+      <main className="card-grid">
         {!isLoading && images.length === 0 && !isFavorite && (
           <h2>No results found</h2>
         )}
@@ -78,7 +78,7 @@ export const GifGrid = ({ category }) => {
                 isFavorite={isFavorite}
               />
             ))}
-      </div>
+      </main>
 
       <ToastContainer />
     </>
@@ -91,20 +91,26 @@ export const ItemGif = ({ id, title, url, handleAddFavorite, isFavorite }) => {
     handleAddFavorite(id, title, url);
   };
 
+
+  //detectar dispositvo.
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(window.navigator.userAgent);
   return (
-    <div
-      className="card"
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
-      onClick={!isFavorite && handleEvento}
-    >
-      <img src={url} alt={title} />
-      {hover && !isFavorite && (
-        <div className="texto-oculto">
-          <span className="textStar">⭐</span>
-          <span className="likeSpan">Add to favorites</span>
-        </div>
-      )}
+
+<div
+  className="card"
+  onMouseEnter={!isMobile && (() => setHover(true))}
+  onMouseLeave={!isMobile && (() => setHover(false))}
+  onTouchStart={isMobile ? () => setHover(true) : undefined}
+  onTouchEnd={isMobile ? () => setHover(true) : undefined}
+  onClick={!isFavorite && handleEvento}
+>
+  <img src={url} alt={title} />
+  {hover && !isFavorite && (
+    <div className="texto-oculto">
+      <span className="textStar">⭐</span>
+      <span className="likeSpan">Add to favorites</span>
     </div>
+  )}
+</div>
   );
 };

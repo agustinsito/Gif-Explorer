@@ -31,7 +31,6 @@ export const AddCategories = ({ onNewCategory }) => {
 
   return (
     <div>
-      <h3 className="textInputBottom">Explore GIFs and save your Favorites</h3>
       <form onSubmit={onSubtmit}>
         <input
           type="text"
