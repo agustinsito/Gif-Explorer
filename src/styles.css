@@ -7,7 +7,7 @@
 
 body {
 
-  background-image: url("./img/bgSvg.svg");
+  background-image: url("./assets/img/bgSvg.svg");
   background-size: contain;
 }
 
@@ -82,7 +82,7 @@ input::placeholder {
   margin: 0 auto;
   border: 1px solid rgb(93, 0, 255);
   border-bottom: 0px;
-  background-color: #190a3f;
+  background-color: #150835b7;
 }
 
 .card {
@@ -90,16 +90,11 @@ input::placeholder {
   position: relative;
   width: 300px; 
   height: 300px; 
-  border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  border-radius: 15px;
-  margin: 5px;
-  border-bottom: 0px;
-  border-top: 0px;
 }
 .card:hover {
   background: linear-gradient(180deg, rgba(12, 244, 0, 0) 16%, #0e0e12);
@@ -205,12 +200,16 @@ footer {
   width: 70%;
   margin: 0 auto;
   border: 1px solid #7c6aa7;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
   background-image: url(./img/bgNoResults.svg);
-  font-weight: 100;
+  font-weight: 300;
   font-size: 1.2rem;
-  color: rgb(255, 255, 255);
+  font-family: Georgia, 'Times New Roman', Times, serif !important;
+  color: rgb(177, 194, 255);
   padding: 10px 0 10px 0px;
   text-align: center;
+  backdrop-filter: blur(23px);
 }
 
 
@@ -219,4 +218,18 @@ footer {
   color: white;
   font-size: 2rem;
   font-weight: 100;
+}
+
+
+.NoFavs{
+  margin: 0 auto;
+  width: 100%
+}
+
+.nofav-container{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

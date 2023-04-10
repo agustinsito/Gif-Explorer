@@ -4,7 +4,6 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import NavBar from "./navBar";
 
-
 export const GifGrid = ({ category }) => {
   const [isFavorite, setIsFavorite] = useState(false);
   const [favorites, setFavorites] = useState([]);
@@ -62,8 +61,11 @@ export const GifGrid = ({ category }) => {
           <h2>No results found</h2>
         )}
         {!isLoading && favorites.length === 0 && isFavorite && (
-          <h2 className="no-favorites">No favorites added</h2>
+          <div className="nofav-container">
+            <img src="./src/assets/img/NoFavs.png" alt="No favorites added" className="NoFavs"/>
+          </div>
         )}
+
         {isFavorite
           ? favorites.map((image) => (
               <ItemGif key={image.id} {...image} isFavorite={isFavorite} />
