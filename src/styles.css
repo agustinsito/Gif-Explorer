@@ -221,7 +221,7 @@ footer {
 }
 
 .nofav-container {
-  content: url("./src/assets/img/NoFavs.png");
+  content: url("./assets/img/nofavs.png");
   min-width: 35%;
   margin-top: 50px;
   margin-bottom: 50px;
