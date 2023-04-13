@@ -62,7 +62,7 @@ export const GifGrid = ({ category }) => {
         )}
         {!isLoading && favorites.length === 0 && isFavorite && (
           <div className="nofav-container">
-            <img src="./src/assets/img/NoFavs.png" alt="No favorites added" className="NoFavs"/>
+            {/* <img src=""./src/assets/img/NoFavs.png" alt="No favorites added" className="NoFavs"/> */}
           </div>
         )}
 
