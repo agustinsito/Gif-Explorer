@@ -2,19 +2,10 @@ import { useState } from "react";
 import { AddCategories, GifGrid } from "./components";
 
 export const GitExpertApp = () => {
-  const [categories, setCategories] = useState(['One Piece']);
-
+  const [category, setCategory] = useState('One Piece');
   const onAddCategory = (newCategory) => {
-    if (
-      categories.find(
-        (category) => category.toLowerCase() === newCategory.toLowerCase()
-      )
-    ) {
-      return;
-    }
-    setCategories([newCategory, ...categories]);
+    setCategory(newCategory);
   };
-
   return (
     <>
       <header className="bg-Svg">
@@ -28,10 +19,7 @@ export const GitExpertApp = () => {
 
 
       <AddCategories onNewCategory={onAddCategory} />
-
-      {categories.map((category) => (
-        <GifGrid key={category} category={category} />
-      ))}
+        <GifGrid category={category} />
       <footer >
           <p>Developed by agustinsito</p>
       </footer>

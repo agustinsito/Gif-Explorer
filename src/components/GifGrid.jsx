@@ -8,7 +8,6 @@ export const GifGrid = ({ category }) => {
   const [isFavorite, setIsFavorite] = useState(false);
   const [favorites, setFavorites] = useState([]);
   const { images, isLoading } = useFetchGifs(category);
-
   const handleAddFavorite = (id, title, url) => {
     // Verificar si la imagen ya está en favoritos
     const isAlreadyFavorite = favorites.some((favorite) => favorite.id === id);

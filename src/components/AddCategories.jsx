@@ -23,7 +23,6 @@ export const AddCategories = ({ onNewCategory }) => {
         theme: "dark",
         })
     )
-
     // setCategories((categories) => [inputValue, ...categories]);
     onNewCategory(inputValue.trim());
     setInputValue("");
