@@ -1,6 +1,14 @@
 import { useState } from "react";
 import { AddCategories, GifGrid } from "./components";
 
+
+// limpiar codigo
+// extraer componentes
+// agregar hover para remover favoritos
+
+
+
+
 export const GitExpertApp = () => {
   const [category, setCategory] = useState('One Piece');
   const onAddCategory = (newCategory) => {
