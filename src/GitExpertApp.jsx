@@ -29,7 +29,7 @@ export const GitExpertApp = () => {
       <AddCategories onNewCategory={onAddCategory} />
         <GifGrid category={category} />
       <footer >
-          <p>Developed by agustinsito</p>
+          <p>Designed & Developed by agustinsito</p>
       </footer>
     </>
   );
